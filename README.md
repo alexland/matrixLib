@@ -3,21 +3,21 @@
 to build & run the tests:
 this command will print a summary to stdout
 
-```
+```scala
 %> sbt coverage test
 
 ```
 
 you generate a detailed report of the test coverage like so:
 
-```
+```scala
 %> sbt coverageReport
 
 ```
 
 from the project root, cd into the reports directory
 
-```
+```shell
 cd target/scala-2.11/scoverage-report
 
 ```
@@ -29,20 +29,20 @@ by opening _index.html_ in a browser.
 
 to build:
 
-```
-%> sbt clean assembly
+```shell
+sbt clean assembly
 
 ```
 then open a scala REPL like so:
 
-```
-%> sbt console
+```shell
+sbt console
 
 ```
 
 
 
-```
+```scala
 scala> import org.dougybarbo.MatrixLib._
 
 scala> // simple implementation of the ThreadStrategy interface that
@@ -83,14 +83,14 @@ Matrix
 
 now change the (implicitly) available ThreadStrategy
 
-```
+```scala
 scala> implicit val ts = ThreadStrategy.ThreadPoolStrategy
 
 scala> mmul(a1, a2)
 
 executing function on thread: pool-1-thread-1
 executing function on thread: pool-1-thread-2
-res2: Matrix = Matrix
+Matrix = Matrix
 |64.0|
 |55.0|
 
