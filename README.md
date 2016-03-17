@@ -1,5 +1,20 @@
 
 
+#### install
+
+to build:
+
+```shell
+sbt clean assembly
+
+```
+then open a scala REPL like so:
+
+```shell
+sbt console
+
+```
+
 to build & run the tests:
 this command will print a summary to stdout
 
@@ -26,28 +41,13 @@ you'll find several several files there but you can access them all
 by opening _index.html_ in a browser.
 
 
-
-to build:
-
-```shell
-sbt clean assembly
-
-```
-then open a scala REPL like so:
-
-```shell
-sbt console
-
-```
-
-
+#### getting started
 
 ```scala
 scala> import org.dougybarbo.MatrixLib._
 
 scala> // simple implementation of the ThreadStrategy interface that
 scala> // executes all work on the current thread
-
 scala> implicit val ts = ThreadStrategy.SameThreadStrategy
 
 scala> val a1 = new Matrix(Array(Array(4, 3, 9), Array(5, 2, 7)))

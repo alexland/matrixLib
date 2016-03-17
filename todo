@@ -1,0 +1,19 @@
+
+
+FIXME: columns in array do not line up properly on repr
+
+FIXME: repr: decimal formatting
+
+TODO: add license
+
+TODO: alpha release
+
+TODO: add badges to readme (eg, release, license, travis ci & coverage)
+
+TODO: add sections (### section title) to readme
+
+TODO: use spire to polymorphize all methods
+
+TODO: netlib research for building scala wrappers over LAPACK & BLAS functions
+
+TODO: in readme crate a table w/ functions, description, repl example
