@@ -19,14 +19,14 @@ to build & run the tests:
 this command will print a summary to stdout
 
 ```scala
-%> sbt coverage test
+sbt coverage test
 
 ```
 
 you generate a detailed report of the test coverage like so:
 
-```scala
-%> sbt coverageReport
+```shell
+sbt coverageReport
 
 ```
 
@@ -40,6 +40,7 @@ cd target/scala-2.11/scoverage-report
 you'll find several several files there but you can access them all
 by opening _index.html_ in a browser.
 
+-------------------
 
 #### getting started
 
@@ -68,7 +69,6 @@ Matrix = Matrix
 |64.0|
 |55.0|
 
-
 scala> val a2 = MatrixCons.rnd(5, 4)
 
 org.dougybarbo.MatrixLib.Matrix =
@@ -94,7 +94,5 @@ Matrix = Matrix
 |64.0|
 |55.0|
 
-
-
-
 ```
+------------------
