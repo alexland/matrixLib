@@ -1,6 +1,7 @@
 
 package org.dougybarbo.MatrixLib
 
+import java.text.DecimalFormat
 import java.util.concurrent.{
   Callable,
   Executors
