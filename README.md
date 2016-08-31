@@ -23,14 +23,14 @@ sbt coverage test
 
 ```
 
-you generate a detailed report of the test coverage like so:
+generate a detailed report of the test coverage like so:
 
 ```shell
-sbt coverageReport
+sbt coverage test coverageReport
 
 ```
 
-from the project root, cd into the reports directory
+and to read that report: from the project root, cd into the reports directory
 
 ```shell
 cd target/scala-2.11/scoverage-report
