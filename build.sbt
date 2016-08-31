@@ -5,13 +5,13 @@ name := "matrix-lib"
 
 assemblyJarName in assembly := "matrixLib.jar"
 
-version := "0.2-SNAPSHOT"
+version := "0.1-SNAPSHOT"
 
 organization := "org.dougybarbo"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.0-M5"
 
-javaHome := Some(file("/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home"))
+javaHome := Some(file("/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home"))
 
 resolvers ++= {
 	Seq(
@@ -25,14 +25,21 @@ resolvers ++= {
 
 libraryDependencies ++= {
 	Seq(
-		"org.json4s"									%%		"json4s-jackson"				%			"3.3.0",
-		"com.typesafe.scala-logging"	%%		"scala-logging-slf4j"		%			"2.1.2",
-		"org.spire-math"							%%		"spire"									%			"0.11.0",
-		"org.typelevel"								%%		"cats"									%			"0.4.0",
-		"com.github.scala-blitz"			%%		"scala-blitz"						%			"1.2",
-		"org.scalactic"								%%		"scalactic"							%			"3.0.0-SNAP13",
-		"org.scalatest"								%%		"scalatest"							%			"3.0.0-SNAP13"		% "test"
-	)
+		"org.scala-lang.modules"			%%		"scala-parser-combinators"	%			"1.0.4",
+		"com.github.fommil.netlib"		%			"all" 											%			"1.1.2",
+		"net.sourceforge.f2j"					%			"arpack_combined_all"				%			"0.1",
+		"net.sf.opencsv"							%			"opencsv"										%			"2.3",
+		"com.github.rwl"							%			"jtransforms"								%			"2.4.0",
+		"org.apache.commons"					%			"commons-math3"							%			"3.6.1",
+		"org.scalanlp"								%%		"breeze"										%			"0.12",
+		"org.scalanlp"								%%		"breeze-natives"						%			"0.12",
+		// "com.lihaoyi"							%			"ammonite-repl_2.11.8"			% 		"0.5.6", 				%	"test" cross CrossVersion.full,
+		"org.spire-math"							%%		"spire"											%			"0.11.0",
+		"org.typelevel"								%%		"cats"											%			"0.7.0",
+		"com.github.scala-blitz"			%%		"scala-blitz"								%			"1.2",
+		"org.scalactic"								%%		"scalactic"									%			"3.0.0",
+		"org.scalatest"								%%		"scalatest"									%			"3.0.0"		% "test"
+			)
 }
 
 // initialCommands += "import akka.testkit._"
