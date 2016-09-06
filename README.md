@@ -19,7 +19,7 @@ to build & run the tests:
 this command will print a summary to stdout
 
 ```scala
-sbt coverage test
+sbt clean coverage test
 
 ```
 
@@ -38,7 +38,10 @@ cd target/scala-2.11/scoverage-report
 ```
 
 you'll find several several files there but you can access them all
-by opening _index.html_ in a browser.
+by opening _index.html_ in a browser, which you can do on a mac like so:
+```shell
+open ./index.html
+```
 
 -------------------
 
@@ -49,7 +52,7 @@ scala> import org.dougybarbo.MatrixLib._
 
 scala> // simple implementation of the ThreadStrategy interface that
 scala> // executes all work on the current thread
-scala> implicit val ts = ThreadStrategy.SameThreadStrategy
+scala> implicit val ts = ThreadScheme.LocalThread
 
 scala> val a1 = new Matrix(Array(Array(4, 3, 9), Array(5, 2, 7)))
 
@@ -84,9 +87,9 @@ Matrix
 now change the (implicitly) available ThreadStrategy
 
 ```scala
-scala> implicit val ts = ThreadStrategy.ThreadPoolStrategy
+scala> implicit val ts = ThreadScheme.MultiThread
 
-scala> mmul(a1, a2)
+scala> MatrixMul.mmul(a1, a2)
 
 executing function on thread: pool-1-thread-1
 executing function on thread: pool-1-thread-2
