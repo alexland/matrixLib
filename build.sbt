@@ -37,6 +37,7 @@ resolvers ++= {
 libraryDependencies ++= {
 	Seq(
 		"org.scala-lang.modules"			%%		"scala-parser-combinators"	%			"1.0.4",
+		"com.netflix.rxjava"					%			"rxjava-scala"							%			"0.20.7",
 		"com.github.fommil.netlib"		%			"all" 											%			"1.1.2",
 		"net.sourceforge.f2j"					%			"arpack_combined_all"				%			"0.1",
 		"net.sf.opencsv"							%			"opencsv"										%			"2.3",
