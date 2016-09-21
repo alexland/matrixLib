@@ -18,9 +18,8 @@ ScalariformKeys.preferences := ScalariformKeys.preferences.value
 // enable the appropriate archetype
 enablePlugins(JavaAppPackaging)
 
-lazy val gitProj1 = ProjectRef(
-											uri("git://git@github.com:soc/repo.git#branch"),
-											"scala-java-time"
+lazy val gitProj1 = RootProject(
+											uri("git://github.com/soc/scala-java-time")
 )
 
 val gitHeadCommitSha = taskKey[String]("determines current git commit SHA")
@@ -48,7 +47,7 @@ lazy val commonSettings = Seq(
 								file(
 									"/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home"
 								)
-							),
+	),
 
 	scalacOptions in Test ++= Seq("-Yrangepos"),
 
