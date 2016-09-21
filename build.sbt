@@ -18,11 +18,9 @@ ScalariformKeys.preferences := ScalariformKeys.preferences.value
 // enable the appropriate archetype
 enablePlugins(JavaAppPackaging)
 
-lazy val ghProj1 = RootProject(
-							uri(
-								"git://github.com/soc/scala-java-time.git#%s"
-									.format("master")
-							)
+lazy val gitProj1 = ProjectRef(
+											uri("git://git@github.com:soc/repo.git#branch"),
+											"scala-java-time"
 )
 
 val gitHeadCommitSha = taskKey[String]("determines current git commit SHA")
@@ -131,16 +129,13 @@ lazy val commonSettings = Seq(
 		case x                                            => old(x)
 	}}
 
-
-
 )
-
 
 lazy val root = (project in file("."))
 
 	.settings(commonSettings: _*)
 
-	.dependsOn(ghProj1)
+	.dependsOn(gitProj1)
 
 	.settings(
 
