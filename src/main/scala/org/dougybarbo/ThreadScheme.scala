@@ -43,7 +43,7 @@ object ThreadScheme {
 		def execute[A](func: Function0[A]) = {
 			// submit a callable class to the thread pool
 			val future = pool.submit(new Callable[A] {
-				def call():A = {
+				def call(): A = {
 					Console.println(
 						"executing function on thread: " + Thread.currentThread.getName
 					)
